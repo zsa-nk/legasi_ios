@@ -1,26 +1,21 @@
 import React from 'react';
-
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, ImageBackground} from 'react-native';
 
 const TopSection = () => {
   return (
-    <View style={styles.topSection}>
+    <ImageBackground
+      source={require('../../../assets/logo/legasi.png')}
+      style={styles.topSection}
+      imageStyle={{borderBottomLeftRadius: 100, borderBottomRightRadius: 100}}>
       <View style={styles.header}>
-        <View style={styles.logoWrapper}>
-          <Image
-            source={require('../../../assets/logo/kotabogor.png')}
-            style={styles.logo}
-          />
-        </View>
+        <View style={styles.logoWrapper}></View>
         <View style={styles.logoTitleWrapper}>
-          <Text style={styles.whiteTitle}>LEGASI</Text>
-          <Text style={styles.blueSubTitle}>
-            (Layanan Kepegawaian Digital Terintegrasi)
-          </Text>
+          <Text style={styles.whiteTitle}></Text>
+          <Text style={styles.blueSubTitle}></Text>
           <Text style={styles.whiteSubTitle}>Version 2.2</Text>
         </View>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 
@@ -64,9 +59,9 @@ const styles = StyleSheet.create({
   topSection: {
     height: 300,
     backgroundColor: '#188FC7',
-    //backgroundColor:'#fff',
     borderBottomLeftRadius: 100,
     borderBottomRightRadius: 100,
+    overflow: 'hidden', // untuk menjaga radius pada background gambar
   },
   header: {
     flex: 1,

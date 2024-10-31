@@ -70,7 +70,7 @@ const TentangScreen = ({navigation}) => {
                 fontFamily: 'Poppins-Bold',
                 fontSize: 16,
               }}>
-              Tentang SiBemo
+              Tentang Legasi
             </Text>
           </View>
         </View>
@@ -86,8 +86,10 @@ const TentangScreen = ({navigation}) => {
               />
             </View>
             <View style={styles.headerTitleWrapper}>
-              <Text style={styles.headerTitle}>SIBEMO</Text>
-              <Text style={styles.headerTitle}>(SIMPEG BErbasis MObile)</Text>
+              <Text style={styles.headerTitle}>LEGASI</Text>
+              <Text style={styles.headerTitle}>
+                (Layanan Kepegawaian Terintegrasi)
+              </Text>
               <Text style={styles.headerSubTitle}>Versi 2.0</Text>
             </View>
           </View>
@@ -102,7 +104,7 @@ const TentangScreen = ({navigation}) => {
             style={styles.collapsibleContentWrapper}>
             <View style={{padding: 8}}>
               <Text style={styles.paragraph}>
-                SiBemo Kota Bogor merupakan sebuah aplikasi Kepegawaian ASN di
+                LAGASI Kota Bogor merupakan sebuah aplikasi Kepegawaian ASN di
                 Lingkungan Pemerintah Kota Bogor yang dapat difungsikan untuk
                 melakukan absensi beserta fungsi fungsi lain didalamnya.
               </Text>

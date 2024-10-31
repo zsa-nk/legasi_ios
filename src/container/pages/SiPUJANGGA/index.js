@@ -1,11 +1,16 @@
-import React, {useEffect, useState} from 'react';
-import {View, Text, Image, SafeAreaView} from 'react-native';
+import React, {useContext, useEffect, useState} from 'react';
+import {View, Text, Image, SafeAreaView, Keyboard} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {WebView} from 'react-native-webview';
+import {AuthContext} from '../../../actions/context/AuthContext';
 import {getObjectData} from '../../../actions/storageAction';
+import {useKeyboard} from '../../../app/_hooks';
 
 const SiPUJANGGA = ({navigation}) => {
+  const {auth} = useContext(AuthContext);
   const [cred, setCred] = useState({nip: '', password: ''});
+  const keyboardHeight = useKeyboard();
+
   useEffect(() => {
     getData();
   }, []);
@@ -14,12 +19,11 @@ const SiPUJANGGA = ({navigation}) => {
     let data = await getObjectData('rawCredential');
     setCred(data);
   };
-  // console.log(cred.nip);
-  // console.log(cred.password);
+
   let inject = `if(document.querySelector('#txtUserName') != null) document.querySelector('#txtUserName').value = '${cred.nip}';
                 if(document.querySelector('#txtPassword') != null) document.querySelector('#txtPassword').value = '${cred.password}'`;
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, height: '150%'}}>
       <View
         style={{
           flexDirection: 'row',
@@ -79,16 +83,20 @@ const SiPUJANGGA = ({navigation}) => {
       </View>
 
       <WebView
+        style={{height: '150%'}}
+        // source={{html:`<html><body onload="document.forms[0].submit();"><form action="https://ekinerja.kotabogor.go.id/Login" method="POST">`+
+        //         `<input name="txtUserName" id="txtUserName" type="text" value='${cred.nip}'>`+
+        //         `<input name="txtPassword" id="txtPassword" type="password" value='${cred.password}'>`+
+        //         `</body></html>`
+        //       }}
         source={{
-          html:
-            `<html><body onload="document.forms[0].submit();"><form action="https://simpeg.kotabogor.go.id/simpeg/index3.php" method="POST">` +
-            `<input name="txtUserName" id="txtUserName" type="text" value='${cred.nip}'>` +
-            `<input name="txtPassword" id="txtPassword" type="password" value='${cred.password}'>` +
-            `</body></html>`,
+          uri: `https://simpeg.kotabogor.go.id/sipujangga?token=${auth.token}`,
         }}
         //injectedJavaScript={inject}
         javaScriptEnabledAndroid={true}
       />
+
+      <View style={{height: keyboardHeight}}></View>
     </SafeAreaView>
   );
 };
