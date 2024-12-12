@@ -4,15 +4,19 @@ import {View, Text, Image, StyleSheet, ImageBackground} from 'react-native';
 const TopSection = () => {
   return (
     <ImageBackground
-      source={require('../../../assets/logo/legasi.png')}
+      source={require('../../../assets/logo/logonew.jpg')}
       style={styles.topSection}
-      imageStyle={{borderBottomLeftRadius: 100, borderBottomRightRadius: 100}}>
+      imageStyle={{
+        borderBottomLeftRadius: 100,
+        borderBottomRightRadius: 100,
+        elevation: 5,
+      }}>
       <View style={styles.header}>
         <View style={styles.logoWrapper}></View>
         <View style={styles.logoTitleWrapper}>
           <Text style={styles.whiteTitle}></Text>
           <Text style={styles.blueSubTitle}></Text>
-          <Text style={styles.whiteSubTitle}>Version 2.2</Text>
+          <Text style={styles.whiteSubTitle}>Version 2.3</Text>
         </View>
       </View>
     </ImageBackground>
@@ -52,12 +56,12 @@ const styles = StyleSheet.create({
   whiteSubTitle: {
     fontFamily: 'Poppins-Regular',
     fontSize: 12,
-    marginTop: 2,
+    marginTop: 65,
     color: '#e6f4ff',
     opacity: 0.8,
   },
   topSection: {
-    height: 300,
+    height: 360,
     backgroundColor: '#188FC7',
     borderBottomLeftRadius: 100,
     borderBottomRightRadius: 100,
@@ -69,11 +73,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 35,
     paddingTop: 15,
     marginTop: 50,
+    elevation: 5,
   },
   logoWrapper: {
     justifyContent: 'center',
     width: 90,
     height: 100,
     width: '100%',
+    elevation: 5,
   },
 });

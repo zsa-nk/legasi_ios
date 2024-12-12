@@ -153,16 +153,17 @@ const HomeScreen = ({navigation}) => {
               </TouchableOpacity>
               <Text style={styles.buttonTitle}>Rekapitulasi Kehadiran</Text>
             </View>
+
             <View style={styles.shortcut}>
               <TouchableOpacity
-                style={styles.kgbButton}
-                onPress={() => navigation.navigate('PenyesuaianKehadiran')}>
+                style={styles.FWAButton}
+                onPress={() => navigation.navigate('FWA')}>
                 <Image
                   source={require('../../../assets/icons/penyesuaiankehadiran.png')}
                   style={styles.buttonIcon}
                 />
               </TouchableOpacity>
-              <Text style={styles.buttonTitle}>Penyesuaian Kehadiran</Text>
+              <Text style={styles.buttonTitle}>Fleksibilitas Kerja</Text>
             </View>
 
             <View style={styles.shortcut}>
@@ -434,6 +435,15 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   jfproButton: {
+    width: 80,
+    height: 80,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    elevation: 5,
+  },
+  FWAButton: {
     width: 80,
     height: 80,
     borderRadius: 18,

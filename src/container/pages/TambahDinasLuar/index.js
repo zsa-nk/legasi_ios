@@ -180,7 +180,7 @@ const TambahDinasLuar = ({navigation}) => {
             numberOfLines={4}
           />
           <View style={{marginBottom: 20}}>
-            <PickerDinas onChage={val => setDinas(val)} />
+            <PickerDinas onChange={val => setDinas(val)} />
           </View>
           <View style={{marginBottom: 20}}>
             <Text

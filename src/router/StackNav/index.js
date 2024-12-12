@@ -21,6 +21,7 @@ import PamongWalagri from '../../container/pages/PamongWalagri';
 import PengajuanCuti from '../../container/pages/PengajuanCuti';
 import Keluarga from '../../container/pages/Keluarga';
 import JFPro from '../../container/pages/JFPro';
+import FWA from '../../container/pages/FWA';
 import SiPUJANGGA from '../../container/pages/SiPUJANGGA';
 import TemanKita from '../../container/pages/TemanKita';
 
@@ -179,6 +180,7 @@ const Router = ({initialRouteName}) => {
         component={JFPro}
         options={{headerShown: false}}
       />
+      <Stack.Screen name="FWA" component={FWA} options={{headerShown: false}} />
 
       <Stack.Screen
         name="UserProfile"
