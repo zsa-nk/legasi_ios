@@ -1,0 +1,16 @@
+ 1087  react-native run-ios
+ 1088  echo
+ 1089  echo $HOME
+ 1090  echo $HOME/.nvm
+ 1091  echo $HOME/.nvm/
+ 1092  ls $HOME/.nvm/
+ 1093  nvm list
+ 1094  cd ios
+ 1095  xcodebuild clean\n
+ 1096  sudo xcodebuild clean\n
+ 1097  xattr -w com.apple.xcode.CreatedByBuildSystem true /Users/m/Private/Kantor/Aplikasi/legasi/ios/build
+ 1098  sudo xcodebuild clean\n
+ 1099  xcodebuild clean\n
+ 1100  cd ..
+ 1101  react-native run-ios
+ 1102  history
