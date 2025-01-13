@@ -10,10 +10,6 @@ import {
   Platform
 } from 'react-native';
 import {RNCamera} from 'react-native-camera';
-// import RNCameraImport from 'react-native-camera';
-// const RNCamera = RNCameraImport.RNCamera();
-// // yang dikomentar atas diubah jadi dibawahnya 
-
 
 import { CameraRoll } from "@react-native-camera-roll/camera-roll";
 import {

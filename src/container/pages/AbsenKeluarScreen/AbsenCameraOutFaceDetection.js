@@ -287,8 +287,8 @@ const AbsenCameraOutFaceDetection = ({navigation}) => {
         onFaceDetectionError={error => {
           console.log(error);
         }}
-        faceDetectionMode={RNCamera.Constants.FaceDetection.Mode.accurate}
-        faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
+        // faceDetectionMode={RNCamera.Constants.FaceDetection.Mode.accurate}
+        // faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
         // faceDetectionClassifications={RNCamera.Constants.FaceDetection.Classifications.all}
       >
         {({camera, status}) => {

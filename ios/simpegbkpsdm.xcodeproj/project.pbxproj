@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* simpegbkpsdmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* simpegbkpsdmTests.m */; };
 		037183B9E9B24374B780B43B /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72ED08E0BA7D49B78C2B395C /* Poppins-MediumItalic.ttf */; };
+		0C8EF3BD2D2E6F77008E0B41 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8EF3BC2D2E6F4A008E0B41 /* libRNCamera.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -42,6 +43,13 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = simpegbkpsdm;
 		};
+		0C8EF3BB2D2E6F4A008E0B41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C8EF3B72D2E6F4A008E0B41 /* RNCamera.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
+			remoteInfo = RNCamera;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +58,8 @@
 		00E356F21AD99517003FC87E /* simpegbkpsdmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = simpegbkpsdmTests.m; sourceTree = "<group>"; };
 		0658C8A4725644EE9CB00DB1 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BlackItalic.ttf"; path = "../assets/fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
 		0A5FB58E58FB4AD5B022D0BE /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		0C8EF3B52D2E6EDD008E0B41 /* RNCameraPackage.cs */ = {isa = PBXFileReference; lastKnownFileType = text; name = RNCameraPackage.cs; path = "../../../../../legasi/node_modules/react-native-camera/windows/RNCamera/RNCameraPackage.cs"; sourceTree = "<group>"; };
+		0C8EF3B72D2E6F4A008E0B41 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* simpegbkpsdm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpegbkpsdm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = simpegbkpsdm/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = simpegbkpsdm/AppDelegate.mm; sourceTree = "<group>"; };
@@ -87,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8EF3BD2D2E6F77008E0B41 /* libRNCamera.a in Frameworks */,
 				A05B72B66DB3D3FB479CF1D1 /* libPods-simpegbkpsdm-simpegbkpsdmTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +130,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0C8EF3B82D2E6F4A008E0B41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C8EF3BC2D2E6F4A008E0B41 /* libRNCamera.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* simpegbkpsdm */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +154,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C8EF3B72D2E6F4A008E0B41 /* RNCamera.xcodeproj */,
+				0C8EF3B52D2E6EDD008E0B41 /* RNCameraPackage.cs */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				173BE449133A8AD981DFC9C2 /* libPods-simpegbkpsdm.a */,
 				2C0B37810EE83EA0DE1300D2 /* libPods-simpegbkpsdm-simpegbkpsdmTests.a */,
@@ -283,6 +304,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0C8EF3B82D2E6F4A008E0B41 /* Products */;
+					ProjectRef = 0C8EF3B72D2E6F4A008E0B41 /* RNCamera.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* simpegbkpsdm */,
@@ -290,6 +317,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0C8EF3BC2D2E6F4A008E0B41 /* libRNCamera.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCamera.a;
+			remoteRef = 0C8EF3BB2D2E6F4A008E0B41 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {

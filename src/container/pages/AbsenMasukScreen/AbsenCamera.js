@@ -9,6 +9,7 @@ import {
   Image,
   Platform
 } from 'react-native';
+// import {RNCamera, FaceDetector } from 'react-native-camera';
 import {RNCamera, FaceDetector } from 'react-native-camera';
 
 import { CameraRoll } from "@react-native-camera-roll/camera-roll";

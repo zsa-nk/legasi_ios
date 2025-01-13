@@ -1,10 +1,12 @@
 diff --git a/node_modules/react-native/index.js b/node_modules/react-native/index.js
-index d59ba34..8023167 100644
+index d59ba34..d629767 100644
 --- a/node_modules/react-native/index.js
 +++ b/node_modules/react-native/index.js
-@@ -435,32 +435,16 @@ module.exports = {
+@@ -434,33 +434,18 @@ module.exports = {
+       );
    },
    // Deprecated Prop Types
++  // Deprecated Prop Types
    get ColorPropType(): $FlowFixMe {
 -    invariant(
 -      false,
@@ -39,11 +41,10 @@ index d59ba34..8023167 100644
    },
  };
  
-diff --git a/node_modules/react-native/scripts/.packager.bat b/node_modules/react-native/scripts/.packager.bat
+diff --git a/node_modules/react-native/scripts/.packager.env b/node_modules/react-native/scripts/.packager.env
 new file mode 100644
-index 0000000..e89260e
+index 0000000..361f5fb
 --- /dev/null
-+++ b/node_modules/react-native/scripts/.packager.bat
++++ b/node_modules/react-native/scripts/.packager.env
 @@ -0,0 +1 @@
-+set RCT_METRO_PORT=8081
-\ No newline at end of file
++export RCT_METRO_PORT=8081

@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>We need access to the camera for face detection</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to your photo library for saving photos</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need access to your location for attendance</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>

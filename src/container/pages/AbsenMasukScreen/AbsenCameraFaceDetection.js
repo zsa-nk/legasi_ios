@@ -31,6 +31,7 @@ import {
 import {AuthContext} from '../../../actions/context/AuthContext';
 import {API} from '../../../actions/config/config';
 import {debounce} from '../../../app/_helper';
+import { request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 
 // const {FaceLabelingModule} = NativeModules;
 
@@ -74,6 +75,9 @@ const usePermissionStorage = () => {
         const status = await PermissionsAndroid.request(permission);
         setgranted(status === 'granted');
       }
+    } else if (Platform.OS === 'ios') {
+      const result = await request(PERMISSIONS.IOS.CAMERA);
+      return result === RESULTS.GRANTED;
     }
   };
 
@@ -306,8 +310,9 @@ const AbsenCameraFaceDetection = ({navigation}) => {
         onFaceDetectionError={error => {
           console.log(error);
         }}
-        faceDetectionMode={RNCamera.Constants.FaceDetection.Mode.accurate}
-        faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
+        // faceDetectionMode={RNCamera.Constants.FaceDetection.Mode.accurate}
+        // faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
+        // faceDetectionClassifications={RNCamera.Constants.FaceDetection.Classifications.all}
         // faceDetectionClassifications={RNCamera.Constants.FaceDetection.Classifications.all}
       >
         {({camera, status}) => {
