@@ -31,9 +31,17 @@ import {
 import {AuthContext} from '../../../actions/context/AuthContext';
 import {API} from '../../../actions/config/config';
 import {debounce} from '../../../app/_helper';
-import { request, PERMISSIONS, RESULTS } from 'react-native-permissions';
+import { setupPermissions, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 
 // const {FaceLabelingModule} = NativeModules;
+
+// Misalnya, setup izin yang diperlukan
+// setupPermissions([
+//   'Camera',
+//   'LocationWhenInUse',
+//   'Microphone',
+//   // Tambahkan izin lain yang Anda perlukan
+// ]);
 
 const useLocalContour = () => {
   const [arrayofContour, setArrayOfContour] = useState([]);
@@ -64,20 +72,44 @@ const useLocalContour = () => {
 };
 
 const usePermissionStorage = () => {
-  const [granted, setgranted] = useState(false);
+  const [granted, setGranted] = useState(false);
+
   const checkPermission = async () => {
-    if (Platform.OS == 'android') {
-      const permission = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE;
-      const hasPermission = await PermissionsAndroid.check(permission);
-      if (hasPermission) {
-        setgranted(true);
-      } else {
-        const status = await PermissionsAndroid.request(permission);
-        setgranted(status === 'granted');
+    try {
+      if (Platform.OS === 'android') {
+        const permission = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE;
+        const hasPermission = await PermissionsAndroid.check(permission);
+        if (hasPermission) {
+          setGranted(true);
+        } else {
+          const status = await PermissionsAndroid.request(permission);
+          setGranted(status === PermissionsAndroid.RESULTS.GRANTED);
+        }
+      } else if (Platform.OS === 'ios') {
+        const cameraPermission = await request(PERMISSIONS.IOS.CAMERA);
+        const photoLibraryPermission = await request(PERMISSIONS.IOS.PHOTO_LIBRARY_ADD_ONLY);
+
+        if (
+          cameraPermission === RESULTS.GRANTED &&
+          photoLibraryPermission === RESULTS.GRANTED
+        ) {
+          setGranted(true);
+        } else {
+          setGranted(false);
+          Toast.showWithGravity(
+            'Permission required for camera and photo library.',
+            Toast.LONG,
+            Toast.CENTER
+          );
+        }
       }
-    } else if (Platform.OS === 'ios') {
-      const result = await request(PERMISSIONS.IOS.CAMERA);
-      return result === RESULTS.GRANTED;
+    } catch (error) {
+      console.error('Permission check error:', error);
+      Toast.showWithGravity(
+        'Permission error: ' + error.message,
+        Toast.LONG,
+        Toast.CENTER
+      );
     }
   };
 

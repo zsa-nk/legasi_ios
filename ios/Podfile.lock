@@ -220,13 +220,13 @@ PODS:
   - React-jsinspector (0.69.3)
   - React-logger (0.69.3):
     - glog
-  - react-native-camera (3.43.0):
+  - react-native-camera (4.2.1):
     - React-Core
-    - react-native-camera/RCT (= 3.43.0)
-    - react-native-camera/RN (= 3.43.0)
-  - react-native-camera/RCT (3.43.0):
+    - react-native-camera/RCT (= 4.2.1)
+    - react-native-camera/RN (= 4.2.1)
+  - react-native-camera/RCT (4.2.1):
     - React-Core
-  - react-native-camera/RN (3.43.0):
+  - react-native-camera/RN (4.2.1):
     - React-Core
   - react-native-cameraroll (5.0.3):
     - React-Core
@@ -325,6 +325,8 @@ PODS:
     - React-Core
   - RNGestureHandler (2.5.0):
     - React-Core
+  - RNPermissions (3.10.1):
+    - React-Core
   - RNReanimated (2.9.1):
     - DoubleConversion
     - FBLazyVector
@@ -407,6 +409,7 @@ DEPENDENCIES:
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNPermissions (from `../node_modules/react-native-permissions`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
@@ -508,6 +511,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/datetimepicker"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
+  RNPermissions:
+    :path: "../node_modules/react-native-permissions"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
@@ -538,7 +543,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 1842ca163b160aeb224d2c65b2a60c393b273c67
   React-jsinspector: bb2605f98aada5d81f3494690da3ef3b4ff3b716
   React-logger: 23a50ef4c18bf9adbb51e2c979318e6b3a2e44a1
-  react-native-camera: f432fcf1b32b528bbf7c3543d3e3b1deb0c5b72a
+  react-native-camera: 3eae183c1d111103963f3dd913b65d01aef8110f
   react-native-cameraroll: db9ebe8fc29baf68defdb1691fb6642e8a8ad04d
   react-native-date-picker: 55193347d8d0f40948f441ffd4e5db6f0a8fbe13
   react-native-document-picker: f5ec1a712ca2a975c233117f044817bb8393cad4
@@ -564,12 +569,13 @@ SPEC CHECKSUMS:
   RNCPicker: 0bf8ef8f7800524f32d2bb2a8bcadd53eda0ecd1
   RNDateTimePicker: 95e0cb71cba4c2f08c62444029f834e6168a2b96
   RNGestureHandler: bad495418bcbd3ab47017a38d93d290ebd406f50
+  RNPermissions: 68709ee218ea540d7527230c958d098fb339759a
   RNReanimated: 2cf7451318bb9cc430abeec8d67693f9cf4e039c
   RNScreens: 4a1af06327774490d97342c00aee0c2bafb497b7
   RNSVG: f3b60aeeaa81960e2e0536c3a9eef50b667ef3a9
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Yoga: 44c64131616253fa83366295acdbce3d14926041
 
-PODFILE CHECKSUM: 2e7246ec7efe86e9ed5ea1c4f2489e8ad4425fc6
+PODFILE CHECKSUM: 9a7ce1b63bdf96699845baca7491fde8c1c61d45
 
 COCOAPODS: 1.16.2
