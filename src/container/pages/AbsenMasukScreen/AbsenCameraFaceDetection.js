@@ -51,7 +51,7 @@ const usePermissionStorage = () => {
         } else {
           setGranted(false);
           Toast.showWithGravity(
-            'Permission required for camera and photo library....',
+            'Permission required for camera and photo library',
             Toast.LONG,
             Toast.CENTER
           );
