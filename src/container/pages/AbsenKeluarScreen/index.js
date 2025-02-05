@@ -234,7 +234,7 @@ const AbsenKeluarScreen = ({navigation}) => {
           selfieStatus={selfieStatus} 
           grantedAbsent={grantedAbsent && absenIN} 
           openCamera={openCamera} 
-          postAbsent={postAbsent} 
+          postAbsent={postAbsentx} 
           absentStatus={absentStatus} />
 
       </ScrollView>

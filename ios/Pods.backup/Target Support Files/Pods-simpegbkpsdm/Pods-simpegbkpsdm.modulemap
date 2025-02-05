@@ -1,0 +1,6 @@
+module Pods_simpegbkpsdm {
+  umbrella header "Pods-simpegbkpsdm-umbrella.h"
+
+  export *
+  module * { export * }
+}
